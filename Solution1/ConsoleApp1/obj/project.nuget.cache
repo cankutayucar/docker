@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Niaox7UlElAPJ4DaPGl4S34v1RjF9+7gH58DDPAgylWmchSOg+f2ucrvuEr1ZZZkR4HP33CQIP4bXCgTMm2PEg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\canku\\OneDrive\\Masaüstü\\dockerize\\Solution1\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\canku\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}

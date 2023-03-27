@@ -1,0 +1,70 @@
+from  => docekr hub dan bir image alamyı sağlar
+WORKDIR => image içerisine bir klasör oluşturmak için kullanılır
+COPY => bir klasörden diğerine kopyalamak için kullanılır
+ENTRYPOINT => bir image dan bir container ayağa kalktığı zaman çalışacak komut
+
+
+docker build -t CankutayUcar .  => bu komut docker image oluşturmak için kullanılır
+
+docker images => işletim sistemi üzerindeki imageleri görüntüler
+
+docker create --name cankutayucar cankutayucar => bir container oluşturmaya yarayan komuttur
+
+docker ps -a => mevcut containerleri görüntüler
+
+docker ps => sadece çalışan containerleri görüntüler
+
+docker start cankutayucar => container çalıştırmak için kullanılır
+
+docker stop cankutayucar => container durdurmak için kullanılır 
+
+docker rm 4c9 => container silmek için kullanılır
+
+docker attach f81 => container e bağlanıp çıktısını almayı sağlar
+
+docker run --name cankutayucar3 cankutayucar => docker create + docker start + docker attach komutu birleşimidir hem container oluşturur
+	hemde container i ayağa kaldırır 
+
+docker run --rm --name cankutayucar cankutayucar => docker create + docker start + docker attach komutu birleşimidir hem container oluşturur hemde container i ayağa kaldırır fakar container durdurulduktan sonra container direk silinir
+
+
+docker rmi a35 => imageleri siler
+
+
+docker run -p 5000:80 274 => docker i 274 imagesiyle container oluşturur ve ayağa kaldırır 5000 portunu docker daki 80 portuna eşitler
+
+
+docker run -d --name mycon -p 5002:80 274 => ocker i 274 imagesiyle container oluşturur ve ayağa kaldırır 5000 portunu docker daki 80 portuna eşitler ve containar a mycon ismi verir
+
+
+docker build --no-cache -t cankutayucar:v2 . => image oluştururken cache den çekme 0 dan oluştur demek
+
+
+docker run -d -p 5000:4500 --name mycon --mount type=bind,source="C:\Users\canku\OneDrive\Masaüstü\images",target="/app/wwwroot/images" 71f => bind mount yöntemi ile container ayağa kaldırma
+
+
+docker volume
+
+docker volume create images => volume oluşturma
+
+docker run -d -p 5000:4500 --name mycon -v images:/app/wwwroot/images 71f => volume bağlayıp container ayağa kaldırma
+
+docker volume rm images => volume silme
+
+docker run -p 5000:4500 --env ASPNETCORE_ENVIRONMENT=PRODUCTION --name mycon 71f => environment belirleme
+
+
+docker run -p 5000:4500 --env ASPNETCORE_ENVIRONMENT=PRODUCTION --env ikincienv=ikincideneme --name mycon 71f => birden fazla environment belirleme
+
+
+
+
+
+
+
+
+
+
+
+
+
